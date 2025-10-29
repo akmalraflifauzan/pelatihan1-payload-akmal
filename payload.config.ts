@@ -30,13 +30,9 @@ export default buildConfig({
       collections: {
         gambar: {
           prefix: "gambar",
-          signedDownloads: {
-            shouldUseSignedURL: ({ collection, filename, req }) => {
-              return filename.endsWith(".mp4");
-            },
-          },
         },
       },
+
       config: {
         endpoint: process.env.S3_ENDPOINT,
         credentials: {
